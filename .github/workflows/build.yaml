@@ -6,7 +6,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: gum
+  IMAGE_NAME: mdb/gum
 
 jobs:
   build-and-push-image:
