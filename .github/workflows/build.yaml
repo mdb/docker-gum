@@ -15,11 +15,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Push to Docker Hub
-        uses: docker/build-push-action@v3
+      - name: Login to DockerHub
+        uses: docker/login-action@v2
         with:
           username: clapclapexcitement
           password: ${{ secrets.DOCKER_HUB_LOGIN }}
+
+      - name: Push to Docker Hub
+        uses: docker/build-push-action@v3
+        with:
+          push: true
           repository: clapclapexcitement/gum
           tag_with_ref: true
           tags: latest
