@@ -1,8 +1,8 @@
 # docker-gum
 
-A `ghcr.io/mdb/gum` version of [gum](https://github.com/charmbracelet/gum), but with a shell.
+A `clapclapexcitement/gum` version of [gum](https://github.com/charmbracelet/gum), but with a shell.
 
-Because `ghcr.io/mdb/gum` has a shell, you can use it to run shell scripts containing `gum` commands like...
+Because `clapclapexcitement/gum` has a shell, you can use it to run shell scripts containing `gum` commands like...
 
 ```
 echo "gum input --placeholder \"What's your name?\"" > gum.sh
@@ -16,5 +16,5 @@ docker run \
   --volume "$$PWD:/src" \
   --workdir "/src" \
   --entrypoint hello.sh \
-  ghcr.io/mdb/gum
+  clapclapexcitement/gum
 ```
