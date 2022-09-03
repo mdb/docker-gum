@@ -15,7 +15,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Login to DockerHub
+      - name: Log in to DockerHub
         uses: docker/login-action@v2
         with:
           username: clapclapexcitement
@@ -25,6 +25,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          repository: clapclapexcitement/gum
-          tag_with_ref: true
-          tags: latest
+          tags: clapclapexcitement/gum:latest
